@@ -1,0 +1,62 @@
+ 
+
+{
+    "name": "BelmontCertus",
+    "id": "/subscriptions/280343b9-caaa-4719-89eb-fa9b941f2d4b/resourceGroups/BelmontCertus_group/providers/Microsoft.Compute/virtualMachines/BelmontCertus",
+    "type": "Microsoft.Compute/virtualMachines",
+    "location": "eastus",
+    "properties": {
+        "vmId": "895a6fbd-27ed-47c7-a9ac-41d58551cadc",
+        "hardwareProfile": {
+            "vmSize": "Standard_E2s_v3"
+        },
+        "storageProfile": {
+            "imageReference": {
+                "publisher": "canonical",
+                "offer": "0001-com-ubuntu-server-focal",
+                "sku": "20_04-lts-gen2",
+                "version": "latest"
+            },
+            "osDisk": {
+                "osType": "Linux",
+                "name": "BelmontCertus_OsDisk_1_81d360cddd62452593618350e9124966",
+                "createOption": "FromImage",
+                "caching": "ReadWrite",
+                "managedDisk": {
+                    "id": "/subscriptions/280343b9-caaa-4719-89eb-fa9b941f2d4b/resourceGroups/BelmontCertus_group/providers/Microsoft.Compute/disks/BelmontCertus_OsDisk_1_81d360cddd62452593618350e9124966"
+                },
+                "diskSizeGB": 30
+            },
+            "dataDisks": []
+        },
+        "osProfile": {
+            "computerName": "BelmontCertus",
+            "adminUsername": "BelmontCertus",
+            "linuxConfiguration": {
+                "disablePasswordAuthentication": true,
+                "ssh": {
+                    "publicKeys": [
+                        {
+                            "path": "/home/BelmontCertus/.ssh/authorized_keys",
+                            "keyData": "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCVPWIaVYQrhovoxJwjQdkXOGVBsVsBMceWb3xAXJtst7lrcn8s5UZsihj95RZF2UiXkn3WxO/GXflwi3+Q6h6c0gMichZaB8cQeA4RpkmrluUA1Jz2L97ztY0R5vbJDUjv/80M38RCmVqwAQ7h7pG2/QmnV8Kn8AE1KijSLgUy3eKQrFStmjLysrUaVLS+oKkTrasHcnrJKjQ0t3jMLYPsK5MhkqAJv1yP+VcaDYdgDXnH6M0ecnXFe2neGr7tskO5F75/DQ5KOP9+Oeob3UaO15nmayqbd+i6QcKA+DwNDkVbNhMpKDUICUYZBzA7aBJZ6kOlAYY/LbcrfQBPrsjR rsa-key-20211028"
+                        }
+                    ]
+                }
+            },
+            "secrets": []
+        },
+        "networkProfile": {
+            "networkInterfaces": [
+                {
+                    "id": "/subscriptions/280343b9-caaa-4719-89eb-fa9b941f2d4b/resourceGroups/BelmontCertus_group/providers/Microsoft.Network/networkInterfaces/belmontcertus170"
+                }
+            ]
+        },
+        "diagnosticsProfile": {
+            "bootDiagnostics": {
+                "enabled": true
+            }
+        },
+        "provisioningState": "Succeeded"
+    }
+}
